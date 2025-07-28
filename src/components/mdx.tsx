@@ -1,7 +1,7 @@
 import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import React, { ReactNode } from "react";
 
-import { 
+import {
   Heading,
   HeadingLink,
   Text,
@@ -84,7 +84,10 @@ function slugify(str: string): string {
 }
 
 function createHeading(as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
-  const CustomHeading = ({ children, ...props }: Omit<React.ComponentProps<typeof HeadingLink>, 'as' | 'id'>) => {
+  const CustomHeading = ({
+    children,
+    ...props
+  }: Omit<React.ComponentProps<typeof HeadingLink>, "as" | "id">) => {
     const slug = slugify(children as string);
     return (
       <HeadingLink
@@ -124,13 +127,17 @@ function createInlineCode({ children }: { children: ReactNode }) {
 
 function createCodeBlock(props: any) {
   // For pre tags that contain code blocks
-  if (props.children && props.children.props && props.children.props.className) {
+  if (
+    props.children &&
+    props.children.props &&
+    props.children.props.className
+  ) {
     const { className, children } = props.children.props;
-    
+
     // Extract language from className (format: language-xxx)
-    const language = className.replace('language-', '');
+    const language = className.replace("language-", "");
     const label = language.charAt(0).toUpperCase() + language.slice(1);
-    
+
     return (
       <CodeBlock
         marginTop="8"
@@ -139,14 +146,14 @@ function createCodeBlock(props: any) {
           {
             code: children,
             language,
-            label
-          }
+            label,
+          },
         ]}
         copyButton={true}
       />
     );
   }
-  
+
   // Fallback for other pre tags or empty code blocks
   return <pre {...props} />;
 }
@@ -187,6 +194,9 @@ type CustomMDXProps = MDXRemoteProps & {
 
 export function CustomMDX(props: CustomMDXProps) {
   return (
-    <MDXRemote {...props} components={{ ...components, ...(props.components || {}) }} />
+    <MDXRemote
+      {...props}
+      components={{ ...components, ...(props.components || {}) }}
+    />
   );
 }

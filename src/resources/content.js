@@ -1,16 +1,16 @@
-import { Logo } from "@once-ui-system/core";
+// import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Danil",
+  lastName: "Suryawan",
   get name() {
-    return `${this.firstName} ${this.lastName}`;
+    return `${this.firstName} H. ${this.lastName}`;
   },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  role: "Software Engineer",
+  avatar: "/images/portrait.jpeg",
+  email: "danilhendrasr@gmail.com",
   location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["English", "Bahasa Indonesia"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -18,8 +18,8 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I write about books, technical deep dive, AI, and a little bit of poems
+      every now and then.
     </>
   ),
 };
@@ -30,12 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/danilhendrasr",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/danilhendrasr",
   },
   {
     name: "Threads",
@@ -55,16 +55,23 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: (
+    <>Leading with technical mastery, cultivating high-quality solutions.</>
+  ),
   featured: {
-    display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    display: false,
+    title: (
+      <>
+        Recent project: <strong className="ml-4">Once UI</strong>
+      </>
+    ),
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Danil, a software engineer at{" "}
+      <a href="https://speechify.com">Speechify</a>, where I craft high-quality
+      products and engineer robust solutions.
     </>
   ),
 };
@@ -90,9 +97,8 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Danil is a Surabaya-based software engineer with passion for impacts and
+        the nitty gritty technical details of stuff.
       </>
     ),
   },
@@ -101,17 +107,17 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Speechify",
+        timeframe: "2024 - Present",
+        role: "Product Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Redesigned the UI/UX for the FLY platform, resulting in a 20%
+            increase in user engagement and 30% faster load times.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Spearheaded the integration of AI tools into design workflows,
+            enabling designers to iterate 50% faster.
           </>,
         ],
         images: [
@@ -125,17 +131,17 @@ const about = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "SelarasTech",
+        timeframe: "2023 - 2024",
+        role: "Software Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed a design system that unified the brand across multiple
+            platforms, improving design consistency by 40%.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Led a cross-functional team to launch a new product line,
+            contributing to a 15% increase in overall company revenue.
           </>,
         ],
         images: [],
@@ -143,11 +149,11 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
+        name: "UPN Jawa Timur",
         description: <>Studied software engineering.</>,
       },
       {
@@ -162,7 +168,9 @@ const about = {
     skills: [
       {
         title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        description: (
+          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -181,7 +189,9 @@ const about = {
       },
       {
         title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        description: (
+          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+        ),
         // optional: leave the array empty if you don't want to display images
         images: [
           {
@@ -199,7 +209,7 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writings about books, tech, and poems...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route

@@ -7,13 +7,16 @@ export async function POST(request: NextRequest) {
   const correctPassword = process.env.PAGE_ACCESS_PASSWORD;
 
   if (!correctPassword) {
-    console.error('PAGE_ACCESS_PASSWORD environment variable is not set');
-    return NextResponse.json({ message: "Internal server error" }, { status: 500 });
+    console.error("PAGE_ACCESS_PASSWORD environment variable is not set");
+    return NextResponse.json(
+      { message: "Internal server error" },
+      { status: 500 }
+    );
   }
 
   if (password === correctPassword) {
     const response = NextResponse.json({ success: true }, { status: 200 });
-    
+
     response.headers.set(
       "Set-Cookie",
       cookie.serialize("authToken", "authenticated", {
@@ -27,6 +30,9 @@ export async function POST(request: NextRequest) {
 
     return response;
   } else {
-    return NextResponse.json({ message: "Incorrect password" }, { status: 401 });
+    return NextResponse.json(
+      { message: "Incorrect password" },
+      { status: 401 }
+    );
   }
 }
