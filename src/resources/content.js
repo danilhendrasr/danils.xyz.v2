@@ -97,8 +97,12 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Danil is a Surabaya-based software engineer with passion for impacts and
-        the nitty gritty technical details of stuff.
+        Hi 👋 <br /> <br /> I'm a Surabaya-based software engineer with a
+        passion to deliver high-quality and successful solutions. I relentlessly
+        chase excellence in every area of my work. Enabling me to bring my
+        technical leadership, exceptional degree of ownership, high technical
+        bar and mastery, breadth of knowledge, and resourcefulness to every team
+        and every project I'm in.
       </>
     ),
   },
@@ -111,22 +115,57 @@ const about = {
         timeframe: "2024 - Present",
         role: "Product Engineer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20%
-            increase in user engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows,
-            enabling designers to iterate 50% faster.
-          </>,
+          <>Recognized by key stakeholders as a high performer.</>,
+          <>Led multiple working groups to deliver major features.</>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
+            src: "/images/projects/booktok/image-01.webp",
+            alt: "BookTok",
+            width: 6,
+            height: 12,
+          },
+          {
+            src: "/images/projects/booktok/image-02.webp",
+            alt: "BookTok",
+            width: 6,
+            height: 12,
+          },
+          {
+            src: "/images/projects/booktok/image-03.webp",
+            alt: "BookTok",
+            width: 6,
+            height: 12,
+          },
+          {
+            src: "/images/projects/booktok/image-04.webp",
+            alt: "BookTok",
+            width: 6,
+            height: 12,
+          },
+          {
+            src: "/images/projects/booktok/image-05.webp",
+            alt: "BookTok",
+            width: 6,
+            height: 12,
+          },
+          {
+            src: "/images/projects/booktok/image-06.webp",
+            alt: "BookTok",
+            width: 6,
+            height: 12,
+          },
+          {
+            src: "/images/projects/booktok/image-07.webp",
+            alt: "BookTok",
+            width: 6,
+            height: 12,
+          },
+          {
+            src: "/images/projects/booktok/image-08.webp",
+            alt: "BookTok",
+            width: 6,
+            height: 12,
           },
         ],
       },
@@ -136,12 +175,26 @@ const about = {
         role: "Software Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple
-            platforms, improving design consistency by 40%.
+            Successfully optimized an internal payroll system, made a crucial
+            process run 6x faster and cut the time to generate a report from 30
+            minutes down to 2 seconds.
           </>,
+
           <>
-            Led a cross-functional team to launch a new product line,
-            contributing to a 15% increase in overall company revenue.
+            Designed and implemented a more automated and fault-tolerant data
+            synchronization mechanism between Ginee (an omnichannel platform)
+            and Magento (an e-commerce channel) using cron jobs, message queue,
+            and retry mechanism.
+          </>,
+
+          <>
+            Single-handedly stabilized a critical project by conducting
+            extensive refactorings, fixing major data integrity issues,
+            improving security, and adopting automated tests.
+          </>,
+
+          <>
+            Got “exceeded expectations” for first-year performance appraisal.
           </>,
         ],
         images: [],
@@ -163,7 +216,7 @@ const about = {
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: false, // set to false to hide this section
     title: "Technical skills",
     skills: [
       {
